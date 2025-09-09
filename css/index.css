@@ -1,3 +1,16 @@
+footer {
+	background: linear-gradient(90deg, #457b9d 0%, #a8dadc 100%);
+	color: #f1faee;
+	text-align: center;
+	padding: 1.5em 0 1em 0;
+	font-size: 1.1em;
+	font-weight: 700;
+	letter-spacing: 1px;
+	margin-top: 2em;
+	border-top-left-radius: 16px;
+	border-top-right-radius: 16px;
+	box-shadow: 0 -2px 8px rgba(0,0,0,0.08);
+}
 #Connect ul {
 	list-style: none;
 	padding: 0;
@@ -40,19 +53,6 @@
 	transform: scale(1.03);
 	box-shadow: 0 4px 12px rgba(0,0,0,0.12);
 }
-h1 {
-	color: #e63946;
-	font-size: 3em;
-	font-family: 'Comic Sans MS', 'Comic Sans', cursive, sans-serif;
-	font-weight: bold;
-	letter-spacing: 2px;
-	text-shadow: 2px 2px 8px #c2c195;
-	background: linear-gradient(90deg, #f1faee 0%, #a8dadc 100%);
-	padding: 0.5em 1em;
-	border-radius: 12px;
-	display: inline-block;
-	margin-top: 1em;
-}
 
 section {
 	margin: 2em 0;
@@ -62,7 +62,7 @@ section {
 body {
 	margin: 0;
 	padding: 0;
-	font-family: 'Comic Sans MS', 'Comic Sans', cursive, sans-serif;
+	font-family: 'Roboto', 'Comic Sans MS', 'Comic Sans', cursive, sans-serif;
 	background-color: #c2c195;
 	color: #1b038a;
 }
@@ -100,12 +100,6 @@ a:hover {
 	text-decoration: underline;
 }
 
-header, footer {
-	background-color: #222;
-	color: #fff;
-	padding: 1em 0;
-	text-align: center;
-}
 
 main {
 	padding: 2em;
