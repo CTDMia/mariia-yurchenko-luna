@@ -1,3 +1,4 @@
+/* Modern Cozy Portfolio Styles - Restored */
 .about-box {
 	background: #e3f6f5;
 	border: 2px solid #261e49;
@@ -206,67 +207,6 @@ main {
 	align-items: center;
 	justify-content: center;
 }
-
-/*
-====================================
-  MOBILE-FIRST BASE STYLES (Default)
-====================================
-*/
-/* All code above is for mobile devices by default */
-
-/*
-====================================
-  TABLET STYLES
-====================================
-*/
-@media (min-width: 600px) and (max-width: 1024px) {
-  /* Tablet: h1, nav buttons, main */
-  h1 {
-    font-size: 2.5em; /* Change 1: bigger name */
-    color: #457b9d;   /* Change 2: blue name */
-    font-family: 'Quicksand', cursive, sans-serif; /* Change 3: font style */
-  }
-  header nav ul li a {
-    font-size: 1.2em; /* Change 1: bigger nav */
-    background: #a8dadc; /* Change 2: lighter nav */
-    color: #1e1935;      /* Change 3: dark text */
-    padding: 0.7em 1.5em;
-    max-width: 180px;
-  }
-  main {
-    padding: 2em;      /* Change 1: more padding */
-    background: #f1faee; /* Change 2: lighter bg */
-    max-width: 800px;   /* Change 3: max width */
-  }
-}
-
-/*
-====================================
-  DESKTOP STYLES
-====================================
-*/
-@media (min-width: 1025px) {
-  /* Desktop: h1, nav buttons, main */
-	h1 {
-		font-size: 3em; /* Change 1: even bigger name */
-		color: #261e49; /* Restore previous color */
-		letter-spacing: 2px; /* Change 3: spacing */
-	}
-  header nav ul li a {
-    font-size: 1.3em; /* Change 1: largest nav */
-    background: #261e49; /* Change 2: dark nav */
-    color: #f1faee;      /* Change 3: light text */
-    padding: 1em 2em;
-    max-width: 220px;
-    border-radius: 16px;
-  }
-  main {
-    padding: 3em;      /* Change 1: most padding */
-    background: #fff;  /* Change 2: white bg */
-    max-width: 1000px; /* Change 3: max width */
-  }
-}
-
 /* --- Grid item hover effect for Experience section --- */
 #Experience ul li {
   transition: transform 0.2s, box-shadow 0.2s;
@@ -275,4 +215,47 @@ main {
   transform: scale(1.05);
   box-shadow: 0 6px 18px rgba(0,0,0,0.15);
   background: #f1faee;
+}
+/* --- Skills section layout --- */
+#Skills ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1em;
+  justify-content: center;
+  padding: 0;
+  list-style: none;
+}
+#Skills ul li {
+  background: #a8dadc;
+  color: #1e1935;
+  padding: 0.7em 1.5em;
+  border-radius: 12px;
+  font-weight: bold;
+  font-size: 1.1em;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+  margin: 0.3em;
+  transition: background 0.2s, color 0.2s, transform 0.2s;
+}
+#Skills ul li:hover {
+  background: #457b9d;
+  color: #fff;
+  transform: scale(1.08);
+}
+@media (min-width: 600px) {
+  #Skills ul {
+    gap: 1.5em;
+  }
+  #Skills ul li {
+    font-size: 1.2em;
+    padding: 1em 2em;
+  }
+}
+@media (min-width: 1025px) {
+  #Skills ul {
+    gap: 2em;
+  }
+  #Skills ul li {
+    font-size: 1.3em;
+    padding: 1.2em 2.5em;
+  }
 }
