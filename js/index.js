@@ -93,3 +93,36 @@ function toggleMessagesSection() {
 }
 // Initialize on page load
 window.addEventListener('DOMContentLoaded', toggleMessagesSection);
+
+// Fetch public repositories from GitHub API for CTDMia
+function fetchGitHubRepos() {
+  const url = 'https://api.github.com/users/CTDMia/repos';
+  console.log('Fetching GitHub repos from:', url);
+  fetch(url)
+    .then(function(response) {
+      console.log('GitHub fetch response status:', response.status);
+      if (!response.ok) {
+        throw new Error(`GitHub API error: ${response.status} ${response.statusText}`);
+      }
+      return response.json(); // Parse the response as JSON
+    })
+    .then(function(data) {
+      const repositories = data;
+      // Console log a labeled sample of the response so reviewer can see the data shape
+      console.log('GitHub repositories response (sample):', repositories.slice(0, 5));
+      // Display repositories in the Projects section
+      const projectSection = document.getElementById('Projects');
+      const projectList = projectSection.querySelector('ul');
+      for (let i = 0; i < repositories.length; i++) {
+        const project = document.createElement('li');
+        project.innerText = repositories[i].name;
+        projectList.appendChild(project);
+      }
+    })
+    .catch(function(error) {
+      console.error('Error fetching repositories:', error);
+    });
+}
+
+// Call the fetch function on DOMContentLoaded so console logs appear after page load
+window.addEventListener('DOMContentLoaded', fetchGitHubRepos);
