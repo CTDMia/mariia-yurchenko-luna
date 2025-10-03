@@ -68,14 +68,14 @@
         <ul></ul>
     </section>
     <section id="leave-message">
-        <h2>Leave a Message</h2>
-        <form name="leave_message">
+        <h2 id="leave-message-heading">Leave a Message</h2>
+        <form name="leave_message" aria-labelledby="leave-message-heading">
             <label for="usersName">Name:</label><br>
-            <input type="text" name="usersName" id="usersName" required><br>
+            <input type="text" name="usersName" id="usersName" required aria-required="true"><br>
             <label for="usersEmail">Email:</label><br>
-            <input type="email" name="usersEmail" id="usersEmail" required><br>
+            <input type="email" name="usersEmail" id="usersEmail" required aria-required="true"><br>
             <label for="usersMessage">Message:</label><br>
-            <textarea name="usersMessage" id="usersMessage" required></textarea><br>
+            <textarea name="usersMessage" id="usersMessage" required aria-required="true"></textarea><br>
             <button type="submit">Submit</button>
         </form>
     </section>
