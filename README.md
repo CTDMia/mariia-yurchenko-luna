@@ -37,6 +37,15 @@ mariia yurchenko
             <li><a href="https://linkedin.com/in/your-linkedin" target="_blank">LinkedIn</a></li>
         </ul>
     </section>
+    
+        <!-- Link to Open API Project repository so reviewer can find it from the portfolio -->
+        <section id="Open-API">
+            <h2>Open API Project</h2>
+            <p>
+                You can view the Open API project repository here:
+                <a href="https://github.com/CTDMia/open-meteo-project" target="_blank">My Open API Project</a>
+            </p>
+        </section>
 </body>
 </html>
 
